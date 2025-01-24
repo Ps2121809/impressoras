@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: hsl(231, 100%, 40%);
+    color: #fff;
+    text-align: center;
+    padding:  20 px 0;
+    padding-top: 2;
+}
+
+/*logo */
+
+.logo {
+    text-align:right;
+    padding-top: 3;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Seção das impressoras */
+#impressoras {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Cartões das impressoras */
+.impressora {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Indica que o card pode ser clicado */
+    transition: all 0.3s ease;
+}
+
+/* Quando a impressora for clicada, aplicamos um efeito de transformação */
+.impressora:hover {
+    transform: scale(1.05);
+}
+
+.impressora h2 {
+    font-size: 24px;
+    color: #0044cc;
+}
+
+/* Estilo para a imagem das impressoras */
+.imagem-impressora {
+    width: 100%;           /* Ajusta a imagem para o tamanho do cartão */
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Informações das impressoras */
+.info {
+    display: none;         /* Inicialmente escondemos as informações */
+    font-size: 16px;
+}
+
+/* Exibe as informações quando a impressora for clicada */
+.impressora.ativo .info {
+    display: block;
+}
+
+/* Status da impressora */
+.status {
+    font-weight: bold;
+    color: green;
+}
+
+/* Quando o status for 'Inativa' */
+.status.inativa {
+    color: rgba(255, 0, 0, 0.938); /* Vermelho com opacidade */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1f00cc;
+    color: white;
+    margin-top: 20px;
+}
